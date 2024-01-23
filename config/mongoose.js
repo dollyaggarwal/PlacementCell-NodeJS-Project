@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import dotenv from "dotenv";
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 dotenv.config();
 mongoose.connect(process.env.DB_URL, {
 	useNewUrlParser: true,
@@ -14,4 +14,4 @@ db.once('open', function () {
 	console.log('Connected to Database :: Mongodb');
 });
 
-export default db;
+module.exports = mongoose;
