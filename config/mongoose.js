@@ -1,17 +1,17 @@
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-dotenv.config();
-mongoose.connect(process.env.DB_URL, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-});
+const mongoose = require("mongoose");
 
-const db = mongoose.connection;
+const connectUsingMongoose = async () => {
+  try {
+    await mongoose.connect(
+      "mongodb+srv://PlacementCell:thdgSwFp5i3M5rKr@cluster0.jyopjgi.mongodb.net/?retryWrites=true&w=majority",
+      {
+        dbName: "SocialMedia",
+      }
+    );
+    console.log("Mongodb connected using mongoose");
+  } catch (err) {
+    console.log("Error while connecting to db");
+  }
+};
 
-db.on('error', console.error.bind(console, 'Error in connecting to MongoDB'));
-
-db.once('open', function () {
-	console.log('Connected to Database :: Mongodb');
-});
-
-module.exports = mongoose;
+module.exports = { connectUsingMongoose, mongoose };

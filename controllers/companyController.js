@@ -1,5 +1,5 @@
-const Student = require('../models/student.schema');
-const Company = require('../models/company.schema');
+const Student = require('../models/studentSchema');
+const Company = require('../models/companySchema');
 
 // render company page
 module.exports.companyPage = async function (req, res) {

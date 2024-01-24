@@ -4,8 +4,10 @@ const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+const router = require('./routes/index');
 const userRouter = require('./routes/userRoutes');
 const studentRouter = require('./routes/studentRoutes');
+const companyRouter = require('./routes/companyRoutes');
 const port = process.env.PORT || 7000;
 
 const app = express();
@@ -33,7 +35,10 @@ app.use(passport.setAuthenticatedUser);
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static('./assets'));
 
+app.use('/',router);
 app.use('/', userRouter);
+app.use('/', studentRouter);
+app.use('/', companyRouter);
 app.get('/', (req, res)=>{
 	return res.send("Welcome to my Placement Cell");
 })

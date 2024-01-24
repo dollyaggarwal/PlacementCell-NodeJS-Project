@@ -20,14 +20,16 @@ const userSchema = new mongoose.Schema(
     },
     {timestamps: true}
 );
-userSchema.pre("save", async function (next) {
-    //  hash user password before saving using bcrypt
-     this.password = await bcrypt.hash(this.password, 12)
-  });
-  // user password compare
-userSchema.methods.comparePassword = async function (password) {
-    return await bcrypt.compare(password, this.password);
-  };
+
+// create a virtual property to set hashed password
+userSchema.virtual('password').set(function (value) {
+	this.passwordHash = bcrypt.hashSync(value, 12);
+});
+
+// function to compare hashed password
+userSchema.methods.isPasswordCorrect = function (password) {
+	return bcrypt.compareSync(password, this.passwordHash);
+};
 
   const User = mongoose.model('User', userSchema);
   module.exports = User;
