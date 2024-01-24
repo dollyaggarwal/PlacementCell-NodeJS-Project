@@ -2,9 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 const userRoutes = require('./userRoutes');
-const studentRoutes = require('./studentRoutes');
-const homeController = require('../controllers/home.controller');
-const companyRoutes = require('./companyRoutes');
+const studentRoutes = require('./studentRoute');
+const homeController = require('../controllers/homeController');
+const companyRoutes = require('./companyRoute');
 const passport = require('passport');
 
 router.get('/', passport.checkAuthentication, homeController.homePage);
