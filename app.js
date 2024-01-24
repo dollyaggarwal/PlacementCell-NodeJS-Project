@@ -4,7 +4,7 @@ const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
-const userRouter = require('./routes/user.routes');
+const userRouter = require('./routes/userRoutes');
 const studentRouter = require('./routes/studentRoutes');
 const port = process.env.PORT || 7000;
 
