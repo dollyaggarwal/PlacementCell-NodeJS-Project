@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<%- include('bootstrap_metaLinks')%>
+		<%- include('_bootstrap_meta')%>
 
 		<title>Sign In</title>
 	</head>
-	<body style="background-color: #e6e9e9">
-		<%- include('header')%>
+	<body style="background-color: #070707">
+		<%- include('_header')%>
 		<div
 			class="w-50 mx-auto mt-5"
 			style="
-				height: 60vh;
+				height: 85vh;
 				display: grid;
 				place-content: center;
-				width: 530px;
-				background: rgb(255, 255, 255);
+				width: 600px;
+				background: rgb(177, 226, 238);
 				border-radius: 5px;
-				box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.197);
+				box-shadow: 7px 7px 12px rgba(37, 37, 37, 0.05);
 			"
 		>
-			<div class="mx-auto mt-3 mb-3" style="width: 100px">
+			<div class="mx-auto mt-3 mb-3" style="width: 90px">
 				<h4>Sign In</h4>
 			</div>
 
 			<form action="/users/create-session" method="POST" style="width: 300px">
 				<!-- Email input -->
 				<div class="form-outline mb-4">
-					<label class="form-label" for="email">Enter Email</label>
-					<input type="email" class="form-control" id="email" placeholder="abc@email.com" name="email" required />
+					<label class="form-label" for="email">Enter Email Id</label>
+					<input type="email" class="form-control" id="email" placeholder="Xyz@email.com" name="email" required />
 				</div>
 
 				<!-- Password input -->
@@ -41,10 +41,10 @@
 
 				<!-- Register buttons -->
 				<div class="text-center">
-					<p>No Account? <a href="/users/signup">Register</a></p>
+					<p>No Account?<a href="/users/signup">SignUp</a></p>
 				</div>
 			</form>
 		</div>
-		<%- include('bootstrap_ScriptTags')%>
+		<%- include('_bootstrap_script')%>
 	</body>
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<%- include('bootstrap_metaLinks')%>
+		<%- include('_bootstrap_meta')%>
 		<title>Create Student Form</title>
 	</head>
 
-	<body style="background-color: #e6e9e9">
-		<%- include('header') %>
+	<body style="background-color: #0a0a0a">
+		<%- include('_header') %>
 		<form
 			class="w-50 mx-auto mt-4"
 			action="/students/create-student"
@@ -15,7 +15,7 @@
 				height: 100%;
 				display: grid;
 				place-content: center;
-				background: white;
+				background: rgb(84, 223, 241);
 				border-radius: 5px;
 				box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
 				padding: 50px 70px;
@@ -35,8 +35,8 @@
 					<input type="text" class="form-control" id="name" name="name" />
 				</div>
 				<div class="mb-3">
-					<label for="email" class="form-label">Email address</label>
-					<input type="email" class="form-control" id="email" placeholder="abc@gmail.com" name="email" />
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" placeholder="Xyz@gmail.com" name="email" />
 				</div>
 				<div class="mb-3">
 					<label for="contactNumber" class="form-label">Mobile Number</label>
@@ -73,6 +73,6 @@
 			</fieldset>
 			<button type="submit" class="btn btn-success align-self-center">Create Student</button>
 		</form>
-		<%- include('bootstrap_ScriptTags')%>
+		<%- include('_bootstrap_script')%>
 	</body>
 </html>

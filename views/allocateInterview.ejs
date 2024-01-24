@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('bootstrap_metaLinks')%>
+    <%- include('_bootstrap_meta')%>
     <link rel="stylesheet" href="/css/interview.css">
     <title>Schedule Interview</title>
   </head>
 
   <body style="background-color: #E6E9E9 ;">
-    <%- include('header') %>
+    <%- include('_header') %>
 <div class="container">
   <form
   class="w-60 mx-auto mt-4" action="/company/schedule-interview" method="post" style="height: 60vh; display: grid; place-content: center; width: 530px; background: white; border-radius: 5px; box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);">
@@ -40,6 +40,6 @@
 </form>
 </div>
     
-    <%- include('bootstrap_ScriptTags')%>
+    <%- include('_bootstrap_script')%>
   </body>
 </html>
