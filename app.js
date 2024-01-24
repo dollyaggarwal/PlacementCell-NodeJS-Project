@@ -5,6 +5,7 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 const userRouter = require('./routes/user.routes');
+const studentRouter = require('./routes/studentRoutes');
 const port = process.env.PORT || 7000;
 
 const app = express();
