@@ -4,6 +4,7 @@ const fs = require('fs');
 const fastcsv = require('fast-csv');
 
 module.exports.signup = function (req, res){
+
     if(req.isAuthenticated()){
         return res.redirect('back');
     }

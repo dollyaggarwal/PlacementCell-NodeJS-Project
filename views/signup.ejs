@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('_bootstrap_meta')%>
+    <%- include('bootstrap_metaLinks')%>
     <title>Sign Up</title>
   </head>
   <body style="background-color: #e6e9e9">
-      <%- include('_header')%>
+      <%- include('header')%>
     <div class="w-50 mx-auto mt-5" style="display: grid; place-content: center; width: 530px; background: white;
     border-radius: 5px;
     box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.149);">
@@ -37,11 +37,11 @@
           <button type="submit" class="btn btn-success btn-block mb-4">Sign Up</button>
         </div>
       </form>
-      <div class="mx-auto mb-3 mt-3" style="width: 300px">
-        <a href="/users/signin" style="margin-left: 100px">Already registered ? Login Instead</a>
+      <div class="mx-auto mb-2 mt-1" style="width: 300px">
+        <a href="/users/signin" style="margin-left: 20px">Already registered ? Login Instead</a>
       </div>
       </div>
-    <%- include('_bootstrap_script')%>
+    <%- include('bootstrap_ScriptTags')%>
 
   </body>
 </html>
