@@ -3,9 +3,9 @@ const dotenv = require('dotenv');
 const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
-// const passportLocal = require('./config/passport-local-startegy');
-const port = process.env.PORT || 8000;
-
+const passportLocal = require('./config/passport-local-strategy');
+const userRouter = require('./routes/user.routes');
+const port = process.env.PORT || 6000;
 
 const app = express();
 //extract styles and scripts from sub pages into the layout
@@ -29,8 +29,8 @@ app.use(
 		cookie: { maxAge: 1000 * 60 * 100 },
 	})
 );
-
 app.use('/', userRouter);
+
 app.listen(port, (error)=>{
     if (error) {
 		console.log(`Error in connecting to server: ${error}`);
