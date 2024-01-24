@@ -5,7 +5,7 @@ const connectUsingMongoose = async () => {
     await mongoose.connect(
       "mongodb+srv://PlacementCell:thdgSwFp5i3M5rKr@cluster0.jyopjgi.mongodb.net/?retryWrites=true&w=majority",
       {
-        dbName: "SocialMedia",
+        dbName: "PlacementCell",
       }
     );
     console.log("Mongodb connected using mongoose");
